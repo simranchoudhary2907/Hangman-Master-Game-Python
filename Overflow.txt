@@ -1,47 +1,92 @@
-Overall Flow of the Project
-
-
-Start
-  |
-  v
-Display Welcome Screen
-  |
-  v
-Select Difficulty
-  |
-  v
-Choose Random Category
-  |
-  v
-Choose Random Word
-  |
-  v
-Reveal Initial Letters
-(Based on Difficulty)
-  |
-  v
-Display Hidden Word
-  |
-  v
-User Guesses Letter
-  |
-  +------> Correct?
-  |            |
- YES          NO
-  |            |
-Show Letter   Lives - 1
-  |
-  v
-Word Complete?
-  |
- YES
-  |
- WIN
-  |
-Update Score
-Update Streak
-Unlock Achievements
-  |
-Play Again?
-  |
- End
+```
+                HANGMAN MASTER GAME
+                       |
+                       v
+                Start the Game
+                       |
+                       v
+            Display Welcome Screen
+                       |
+                       v
+             Select Difficulty Level
+         (Easy / Medium / Hard)
+                       |
+                       v
+            Initialize Game Settings
+          (Lives, Hints, Difficulty)
+                       |
+                       v
+          Randomly Select a Category
+  (Programming / Technology / Cyber Security)
+                       |
+                       v
+           Randomly Select a Secret Word
+                       |
+                       v
+     Reveal Initial Letters (if applicable)
+  Easy  -> 2 letters revealed
+  Medium -> First letter revealed
+  Hard -> No letters revealed
+                       |
+                       v
+           Display Current Game State
+      • Category
+      • Hidden Word
+      • Lives Remaining
+      • Hints Remaining
+      • Guessed Letters
+                       |
+                       v
+             Player Enters a Guess
+                       |
+                       v
+            Validate User Input
+                       |
+                       v
+            Is the Guess Correct?
+                /               \
+              Yes                No
+               |                  |
+               v                  v
+     Reveal Letter(s)      Reduce Lives by 1
+               |                  |
+               +--------+---------+
+                        |
+                        v
+            Check Word Completion
+                /               \
+              Yes                No
+               |                  |
+               v                  |
+          Player Wins             |
+               |                  |
+               v                  |
+  Update Score, Streak & Achievements
+               |                  |
+               +--------+---------+
+                        |
+                        v
+             Lives Remaining > 0 ?
+                /               \
+              Yes                No
+               |                  |
+               |                  v
+               |             Player Loses
+               |                  |
+               +--------+---------+
+                        |
+                        v
+              Display Game Statistics
+         • Score
+         • Current Streak
+         • Best Streak
+         • Achievements
+                        |
+                        v
+                Play Again ?
+                /         \
+              Yes         No
+               |           |
+               v           v
+         Start New Game    End
+```
