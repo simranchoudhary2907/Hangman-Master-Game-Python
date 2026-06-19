@@ -1,0 +1,47 @@
+Overall Flow of the Project
+
+
+Start
+  |
+  v
+Display Welcome Screen
+  |
+  v
+Select Difficulty
+  |
+  v
+Choose Random Category
+  |
+  v
+Choose Random Word
+  |
+  v
+Reveal Initial Letters
+(Based on Difficulty)
+  |
+  v
+Display Hidden Word
+  |
+  v
+User Guesses Letter
+  |
+  +------> Correct?
+  |            |
+ YES          NO
+  |            |
+Show Letter   Lives - 1
+  |
+  v
+Word Complete?
+  |
+ YES
+  |
+ WIN
+  |
+Update Score
+Update Streak
+Unlock Achievements
+  |
+Play Again?
+  |
+ End
